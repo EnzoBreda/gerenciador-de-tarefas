@@ -18,10 +18,11 @@ export default function Tasks({ tasks, onTaskClick, onDeletTaskClick }) {
         <li key={task.id} className="flex gap-2">
           <button
             onClick={() => onTaskClick(task.id)}
-            className={`bg-slate-400 text-white p-2 rounded-md w-full text-left" ${
+           className={`bg-slate-400 text-white p-2 flex items-center gap-2 rounded-md w-full text-left" ${
               task.isCompleted && "line-through "
             }`}
           >
+            {task.isCompleted && <CheckIcon />}
             {task.title}
           </button>
           <Button onClick={() => onSeeDetailsClick(task)}>
