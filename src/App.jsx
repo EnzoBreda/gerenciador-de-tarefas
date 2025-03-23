@@ -4,7 +4,7 @@ import Tasks from "./assets/components/Tasks";
 
 export default function App() {
   const [tasks, setTasks] = useState(
-    JSON.parse(localStorage.getItem("tasks") || [])
+    JSON.parse(localStorage.getItem("tasks") || JSON.stringify([]))
   );
 
   useEffect(() => {
